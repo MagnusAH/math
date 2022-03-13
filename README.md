@@ -35,7 +35,7 @@ Vector as an array of floats is accessable as `f`
 4th element is accessable as `w`, `a` or `v`  
 Vector as an array of floats is accessable as `f`  
 
-**Debugging**
+**Debugging**  
 Each vector type comes with two debugging macros, `VEC?F_FMT` and `VEC?F_ARG`, where `?` is representative of the number of elements in the vector.
 They are used to print the value of the vector, eg: `printf(VEC4F_FMT, VEC4F_ARG(vec4f_t));`  
 
@@ -90,7 +90,7 @@ Individual matrix elements are accessable as `m<row><column>`, eg: `m02` for the
 Matrix as an array of `vec4f_t` rows is accessable with `r`  
 Matrix as an array of floats is accessable with `f`  
 
-**Debugging**
+**Debugging**  
 Each matrix type comes with two debugging macros, `MAT?F_FMT` and `MAT?F_ARG`, where `?` is representative of the size of the matrix.
 They are used to print the value of the matrix, eg: `printf(MAT4F_FMT, MAT4F_ARG(mat4f_t));`  
 	

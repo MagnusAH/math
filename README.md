@@ -263,10 +263,14 @@ void inverse(float* matrix)
 		
 	// compute matrix of minors
 	__m128
-		m0 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i11 , j0), _mm_mul_ps(i12 , j1)), _mm_mul_ps(i13 , j2)), i11 * d0 + i12 * d1 + i13 * d2
-		m1 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i01 , j0), _mm_mul_ps(i02 , j1)), _mm_mul_ps(i03 , j2)), i01 * d0 + i02 * d1 + i03 * d2
-		m2 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i31 , j3), _mm_mul_ps(i32 , j4)), _mm_mul_ps(i33 , j5)), i31 * d3 + i32 * d4 + i33 * d5
-		m3 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i21 , j3), _mm_mul_ps(i22 , j4)), _mm_mul_ps(i23 , j5)); i21 * d3 + i22 * d4 + i23 * d5
+		// i11 * d0 + i12 * d1 + i13 * d2
+		m0 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i11 , j0), _mm_mul_ps(i12 , j1)), _mm_mul_ps(i13 , j2)), 
+		// i01 * d0 + i02 * d1 + i03 * d2
+		m1 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i01 , j0), _mm_mul_ps(i02 , j1)), _mm_mul_ps(i03 , j2)), 
+		// i31 * d3 + i32 * d4 + i33 * d5
+		m2 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i31 , j3), _mm_mul_ps(i32 , j4)), _mm_mul_ps(i33 , j5)), 
+		// i21 * d3 + i22 * d4 + i23 * d5
+		m3 = _mm_add_ps(_mm_add_ps(_mm_mul_ps(i21 , j3), _mm_mul_ps(i22 , j4)), _mm_mul_ps(i23 , j5));
 		
 	// determinant intermediary, determinant is [0] - [1] + [2] - [3] of r0 * m0
 	// using this saves us 3 multiplications
@@ -295,10 +299,14 @@ void inverse(float* matrix)
 
 	// compute transpose intermediary group
 	__m128
-		tr01a = _mm_permute_ps(_mm_shuffle_ps(m0, m1, 0b01000100), 0b11011000), // [0], [1] of m0 and m1 => {m0[0], m1[0], m0[1], m1[1]}
-		tr01b = _mm_permute_ps(_mm_shuffle_ps(m0, m1, 0b11101110), 0b11011000), // [2], [3] of m0 and m1 => {m0[2], m1[2], m0[3], m1[3]}
-		tr23a = _mm_permute_ps(_mm_shuffle_ps(m2, m3, 0b01000100), 0b11011000), // [0], [1] of m2 and m3 => {m2[0], m3[0], m2[1], m3[1]}
-		tr23b = _mm_permute_ps(_mm_shuffle_ps(m2, m3, 0b11101110), 0b11011000); // [2], [3] of m2 and m3 => {m2[2], m3[2], m2[3], m3[3]}
+		// [0], [1] of m0 and m1 => {m0[0], m1[0], m0[1], m1[1]}
+		tr01a = _mm_permute_ps(_mm_shuffle_ps(m0, m1, 0b01000100), 0b11011000), 
+		// [2], [3] of m0 and m1 => {m0[2], m1[2], m0[3], m1[3]}
+		tr01b = _mm_permute_ps(_mm_shuffle_ps(m0, m1, 0b11101110), 0b11011000), 
+		// [0], [1] of m2 and m3 => {m2[0], m3[0], m2[1], m3[1]}
+		tr23a = _mm_permute_ps(_mm_shuffle_ps(m2, m3, 0b01000100), 0b11011000), 
+		// [2], [3] of m2 and m3 => {m2[2], m3[2], m2[3], m3[3]}
+		tr23b = _mm_permute_ps(_mm_shuffle_ps(m2, m3, 0b11101110), 0b11011000); 
 	
 	// transpose matrix
 	__m128

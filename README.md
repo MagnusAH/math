@@ -1,7 +1,7 @@
 # OpenGL Math Library
 
 Math library geared towards development with GLSL and C, for x86 only currently  
-Library is compatable with GCC and Clang, not MSVC currently  
+Library is compatable with GCC and Clang, not MSVC at the moment  
 Library requires SSE support as a minimum, but AVX is recommended for the additional registers  
 
 ## Usage
@@ -137,6 +137,7 @@ Multiples matrix `a`, by vector `b` (treated as a column vector), storing the re
 
 ## SIMD compatable calculation of the inverse of a 4x4 matrix
 
+<<<<<<< HEAD
 The inverse of a matrix can be calculated in multiple ways, however the classical adjoint method works the best for SIMD as it has the same calculation applied to multiple elements. Using this method the the inverse is found by calculating the matrix of cofactors, dividing each element by the determinant of the matrix, multiplying by an alternating sign grid, and then transposing the matrix.
 
 The matrix of cofactors for the 4x4 matrix *m* with resultant matrix *o* can be written as the following, in the format of *m<row><column>*.

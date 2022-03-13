@@ -141,73 +141,73 @@ The inverse of a matrix can be calculated in multiple ways, however the classica
 
 The matrix of cofactors for the 4x4 matrix *m* with resultant matrix *o* can be written as the following, in the format of *m<row><column>*.
 
-> o00 = m11 * (m22 * m33 - m23 * m32) - m12 * (m21 * m33 - m23 * m31) + m13 * (m21 * m32 - m22 * m31)
-> o01 = m10 * (m22 * m33 - m23 * m32) - m12 * (m20 * m33 - m23 * m30) + m13 * (m20 * m32 - m22 * m30)
-> o02 = m10 * (m21 * m33 - m23 * m31) - m11 * (m20 * m33 - m23 * m30) + m13 * (m20 * m31 - m21 * m30)
-> o03 = m10 * (m21 * m32 - m22 * m31) - m11 * (m20 * m32 - m22 * m30) + m12 * (m20 * m31 - m21 * m30)
-> 
-> o10 = m01 * (m22 * m33 - m23 * m32) - m02 * (m21 * m33 - m23 * m31) + m03 * (m21 * m32 - m22 * m31)
-> o11 = m00 * (m22 * m33 - m23 * m32) - m02 * (m20 * m33 - m23 * m30) + m03 * (m20 * m32 - m22 * m30)
-> o12 = m00 * (m21 * m33 - m23 * m31) - m01 * (m20 * m33 - m23 * m30) + m03 * (m20 * m31 - m21 * m30)
-> o13 = m00 * (m21 * m32 - m22 * m31) - m01 * (m20 * m32 - m22 * m30) + m02 * (m20 * m31 - m21 * m30)
-> 
-> o20 = m01 * (m12 * m33 - m13 * m32) - m02 * (m11 * m33 - m13 * m31) + m03 * (m11 * m32 - m12 * m31)
-> o21 = m00 * (m12 * m33 - m13 * m32) - m02 * (m10 * m33 - m13 * m30) + m03 * (m10 * m32 - m12 * m30)
-> o22 = m00 * (m11 * m33 - m13 * m31) - m01 * (m10 * m33 - m13 * m30) + m03 * (m10 * m31 - m11 * m30)
-> o23 = m00 * (m11 * m32 - m12 * m31) - m01 * (m10 * m32 - m12 * m30) + m02 * (m10 * m31 - m11 * m30)
-> 
-> o30 = m01 * (m12 * m23 - m13 * m22) - m02 * (m11 * m23 - m13 * m21) + m03 * (m11 * m22 - m12 * m21)
-> o31 = m00 * (m12 * m23 - m13 * m22) - m02 * (m10 * m23 - m13 * m20) + m03 * (m10 * m22 - m12 * m20)
-> o32 = m00 * (m11 * m23 - m13 * m21) - m01 * (m10 * m23 - m13 * m20) + m03 * (m10 * m21 - m11 * m20)
-> o33 = m00 * (m11 * m22 - m12 * m21) - m01 * (m10 * m22 - m12 * m20) + m02 * (m10 * m21 - m11 * m20)
+> o00 = m11 * (m22 * m33 - m23 * m32) - m12 * (m21 * m33 - m23 * m31) + m13 * (m21 * m32 - m22 * m31)  
+> o01 = m10 * (m22 * m33 - m23 * m32) - m12 * (m20 * m33 - m23 * m30) + m13 * (m20 * m32 - m22 * m30)  
+> o02 = m10 * (m21 * m33 - m23 * m31) - m11 * (m20 * m33 - m23 * m30) + m13 * (m20 * m31 - m21 * m30)  
+> o03 = m10 * (m21 * m32 - m22 * m31) - m11 * (m20 * m32 - m22 * m30) + m12 * (m20 * m31 - m21 * m30)  
+>   
+> o10 = m01 * (m22 * m33 - m23 * m32) - m02 * (m21 * m33 - m23 * m31) + m03 * (m21 * m32 - m22 * m31)  
+> o11 = m00 * (m22 * m33 - m23 * m32) - m02 * (m20 * m33 - m23 * m30) + m03 * (m20 * m32 - m22 * m30)  
+> o12 = m00 * (m21 * m33 - m23 * m31) - m01 * (m20 * m33 - m23 * m30) + m03 * (m20 * m31 - m21 * m30)  
+> o13 = m00 * (m21 * m32 - m22 * m31) - m01 * (m20 * m32 - m22 * m30) + m02 * (m20 * m31 - m21 * m30)  
+>   
+> o20 = m01 * (m12 * m33 - m13 * m32) - m02 * (m11 * m33 - m13 * m31) + m03 * (m11 * m32 - m12 * m31)  
+> o21 = m00 * (m12 * m33 - m13 * m32) - m02 * (m10 * m33 - m13 * m30) + m03 * (m10 * m32 - m12 * m30)  
+> o22 = m00 * (m11 * m33 - m13 * m31) - m01 * (m10 * m33 - m13 * m30) + m03 * (m10 * m31 - m11 * m30)  
+> o23 = m00 * (m11 * m32 - m12 * m31) - m01 * (m10 * m32 - m12 * m30) + m02 * (m10 * m31 - m11 * m30)  
+>   
+> o30 = m01 * (m12 * m23 - m13 * m22) - m02 * (m11 * m23 - m13 * m21) + m03 * (m11 * m22 - m12 * m21)  
+> o31 = m00 * (m12 * m23 - m13 * m22) - m02 * (m10 * m23 - m13 * m20) + m03 * (m10 * m22 - m12 * m20)  
+> o32 = m00 * (m11 * m23 - m13 * m21) - m01 * (m10 * m23 - m13 * m20) + m03 * (m10 * m21 - m11 * m20)  
+> o33 = m00 * (m11 * m22 - m12 * m21) - m01 * (m10 * m22 - m12 * m20) + m02 * (m10 * m21 - m11 * m20)  
 
 This however can be simplefied using the following 4 element groups. 
 
-> i01 = m01, m00, m00, m00
-> i02 = m02, m02, m01, m01
-> i03 = m03, m03, m03, m02
-> 
-> i11 = m11, m10, m10, m10
-> i12 = m12, m12, m11, m11
-> i13 = m13, m13, m13, m12
-> 
-> i21 = m21, m20, m20, m20
-> i22 = m22, m22, m21, m21
-> i23 = m23, m23, m23, m22
-> 
-> i31 = m31, m30, m30, m30
-> i32 = m32, m32, m31, m31
-> i33 = m33, m33, m33, m32
+> i01 = m01, m00, m00, m00  
+> i02 = m02, m02, m01, m01  
+> i03 = m03, m03, m03, m02  
+>   
+> i11 = m11, m10, m10, m10  
+> i12 = m12, m12, m11, m11  
+> i13 = m13, m13, m13, m12  
+>   
+> i21 = m21, m20, m20, m20  
+> i22 = m22, m22, m21, m21  
+> i23 = m23, m23, m23, m22  
+>   
+> i31 = m31, m30, m30, m30  
+> i32 = m32, m32, m31, m31  
+> i33 = m33, m33, m33, m32  
 
 Substituting these in we get a new formula, where each calculation is on a 4 element vector, perfect for SIMD and taking it from 244 to 56 mathematical operations.
 
-> o0 = i11 * (i22 * i33 - i23 * i32) - i12 * (i21 * i33 - i23 * i31) + i13 * (i21 * i32 - i22 * i31)
-> o1 = i01 * (i22 * i33 - i23 * i32) - i02 * (i21 * i33 - i23 * i31) + i03 * (i21 * i32 - i22 * i31)
-> o2 = i01 * (i12 * i33 - i13 * i32) - i02 * (i11 * i33 - i13 * i31) + i03 * (i11 * i32 - i12 * i31)
-> o3 = i01 * (i12 * i23 - i13 * i22) - i02 * (i11 * i23 - i13 * i21) + i03 * (i11 * i22 - i12 * i21)
+> o0 = i11 * (i22 * i33 - i23 * i32) - i12 * (i21 * i33 - i23 * i31) + i13 * (i21 * i32 - i22 * i31)  
+> o1 = i01 * (i22 * i33 - i23 * i32) - i02 * (i21 * i33 - i23 * i31) + i03 * (i21 * i32 - i22 * i31)  
+> o2 = i01 * (i12 * i33 - i13 * i32) - i02 * (i11 * i33 - i13 * i31) + i03 * (i11 * i32 - i12 * i31)  
+> o3 = i01 * (i12 * i23 - i13 * i22) - i02 * (i11 * i23 - i13 * i21) + i03 * (i11 * i22 - i12 * i21)  
 
 However, there is more substitution that can be done if we rewrite the formula as the following.
 
-> o0 = i11 * (i22 * i33 - i23 * i32) + i12 * (i23 * i31 - i21 * i33) + i13 * (i21 * i32 - i22 * i31)
-> o1 = i01 * (i22 * i33 - i23 * i32) + i02 * (i23 * i31 - i21 * i33) + i03 * (i21 * i32 - i22 * i31)
-> o2 = i31 * (i02 * i13 - i03 * i12) + i32 * (i03 * i11 - i01 * i13) + i33 * (i01 * i12 - i02 * i11)
-> o3 = i21 * (i02 * i13 - i03 * i12) + i22 * (i03 * i11 - i01 * i13) + i23 * (i01 * i12 - i02 * i11)
+> o0 = i11 * (i22 * i33 - i23 * i32) + i12 * (i23 * i31 - i21 * i33) + i13 * (i21 * i32 - i22 * i31)  
+> o1 = i01 * (i22 * i33 - i23 * i32) + i02 * (i23 * i31 - i21 * i33) + i03 * (i21 * i32 - i22 * i31)  
+> o2 = i31 * (i02 * i13 - i03 * i12) + i32 * (i03 * i11 - i01 * i13) + i33 * (i01 * i12 - i02 * i11)  
+> o3 = i21 * (i02 * i13 - i03 * i12) + i22 * (i03 * i11 - i01 * i13) + i23 * (i01 * i12 - i02 * i11)  
 
 This allows us to simplify using the following intermediary groups.
 
-> d0 = i22 * i33 - i23 * i32
-> d1 = i23 * i31 - i21 * i33
-> d2 = i21 * i32 - i22 * i31
-> d3 = i02 * i13 - i03 * i12
-> d4 = i03 * i11 - i01 * i13
-> d5 = i01 * i12 - i02 * i11
+> d0 = i22 * i33 - i23 * i32  
+> d1 = i23 * i31 - i21 * i33  
+> d2 = i21 * i32 - i22 * i31  
+> d3 = i02 * i13 - i03 * i12  
+> d4 = i03 * i11 - i01 * i13  
+> d5 = i01 * i12 - i02 * i11  
 
 Substituting these in we get a new formula, taking us from 56 to 38 mathematical operations.
 
-> o0 = i11 * d0 + i12 * d1 + i13 * d2
-> o1 = i01 * d0 + i02 * d1 + i03 * d2
-> o2 = i31 * d3 + i32 * d4 + i33 * d5
-> o3 = i21 * d3 + i22 * d4 + i23 * d5
+> o0 = i11 * d0 + i12 * d1 + i13 * d2  
+> o1 = i01 * d0 + i02 * d1 + i03 * d2  
+> o2 = i31 * d3 + i32 * d4 + i33 * d5  
+> o3 = i21 * d3 + i22 * d4 + i23 * d5  
 
 The determinant of the matrix can then be calculated using the first row of the matrix of mirrors and the first row of the original matrix.
 

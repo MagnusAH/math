@@ -39,8 +39,7 @@ Library can be configure to either compile, inline, or force inline functions. I
 Each vector type comes with two debugging macros, `VEC?F_FMT` and `VEC?F_ARG`, where `?` is representative of the number of elements in the vector.
 They are used to print the value of the vector, eg: `printf(VEC4F_FMT, VEC4F_ARG(vec4f_t));`  
 
-**Below is a list of functions where `?` is representative of the number of elements in the vector, being 2, 3 or 4**
-
+**Below is a list of functions where `?` is representative of the number of elements in the vector, being 2, 3 or 4**  
 Due to the vectors being a list of float, vectors are compatable with functions for smaller sizes, eg: 3 element vectors work with functions for 2 element vectors, only affecting the first two elements.  
 
 > `vec?f_addf(vec?f_t* o, vec?f_t* a, float b)`  
@@ -94,7 +93,7 @@ Due to the vectors being a list of float, vectors are compatable with functions 
 Each matrix type comes with two debugging macros, `MAT?F_FMT` and `MAT?F_ARG`, where `?` is representative of the size of the matrix.
 They are used to print the value of the matrix, eg: `printf(MAT4F_FMT, MAT4F_ARG(mat4f_t));`  
 	
-**Below is a list of functions where `?` is representative of the size of the matrix, being 3 (3x3) or 4 (4x4)**
+**Below is a list of functions where `?` is representative of the size of the matrix, being 3 (3x3) or 4 (4x4)**  
 It is recommended to use 4x4 matrices in all cases due to them being significantly faster and that not all of the methods are currently implemented for 3x3 matrices. Unimplemented methods are marked as such in the header files.  
 
 > `mat?f_addf(mat?f_t* o, mat?f_t* a, float b)`  

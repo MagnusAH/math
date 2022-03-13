@@ -8,7 +8,7 @@ Library requires SSE support as a minimum, but AVX is recommended for the additi
 
 ### General
 
-Library can be configure to either compile, inline, or force inline functions. If compiling is not desired `math.c` is unnecessary. `rodata.c` is a must have as it contains the identity values for 3x3 and 4x4 matrices. All files in `src` are required for the project and must be in the same directory. Function declarations are in `.h` files and implementations are in `.i` files.  
+Library can be configure to either compile, inline, or force inline functions. If compiling is not desired `math.c` is unnecessary. `rodata.c` is a must have as it contains the identity values for 3x3 and 4x4 matrices. All files in `src` are required for the project and must be in the same directory. Function declarations are in `.h` files and implementations are in `.i` files. Function names in header files should be self explanitory as the what the function does, standard parameter names are `o` for output, `a` for the first input, and `b` for the second input. 
 
 ### Vector
 

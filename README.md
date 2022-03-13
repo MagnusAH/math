@@ -1,6 +1,6 @@
 # OpenGL Math Library
 
-Math library geared towards development with GLSL, for x86 only currently  
+Math library geared towards development with GLSL and C, for x86 only currently  
 Library is compatable with GCC and Clang, not MSVC currently  
 Library requires SSE support as a minimum, but AVX is recommended for the additional registers  
 

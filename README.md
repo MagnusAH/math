@@ -137,7 +137,7 @@ Multiples matrix `a`, by vector `b` (treated as a column vector), storing the re
 
 The inverse of a matrix can be calculated in multiple ways, however the classical adjoint method works the best for SIMD as it has the same calculation applied to multiple elements. Using this method the the inverse is found by calculating the matrix of cofactors, dividing each element by the determinant of the matrix, multiplying by an alternating sign grid, and then transposing the matrix.
 
-The matrix of cofactors for the 4x4 matrix *m* with resultant matrix *o* can be written as the following, in the format of *m<row><column>*.
+The matrix of cofactors for the 4x4 matrix *m* with resultant matrix *o* can be written as the following, in the format of `m<row><column>`.
 
 > o00 = m11 * (m22 * m33 - m23 * m32) - m12 * (m21 * m33 - m23 * m31) + m13 * (m21 * m32 - m22 * m31)  
 > o01 = m10 * (m22 * m33 - m23 * m32) - m12 * (m20 * m33 - m23 * m30) + m13 * (m20 * m32 - m22 * m30)  

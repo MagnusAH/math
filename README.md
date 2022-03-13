@@ -236,10 +236,21 @@ void inverse(float* matrix)
 		
 	// permute into 4 element groups
 	__m128
-		i01 = _mm_permute_ps(r0, 0b00000001), i02 = _mm_permute_ps(r0, 0b01011010), i03 = _mm_permute_ps(r0, 0b10111111),
-		i11 = _mm_permute_ps(r1, 0b00000001), i12 = _mm_permute_ps(r1, 0b01011010), i13 = _mm_permute_ps(r1, 0b10111111),
-		i21 = _mm_permute_ps(r2, 0b00000001), i22 = _mm_permute_ps(r2, 0b01011010), i23 = _mm_permute_ps(r2, 0b10111111),
-		i31 = _mm_permute_ps(r3, 0b00000001), i32 = _mm_permute_ps(r3, 0b01011010), i33 = _mm_permute_ps(r3, 0b10111111);
+		i01 = _mm_permute_ps(r0, 0b00000001), 
+		i02 = _mm_permute_ps(r0, 0b01011010), 
+		i03 = _mm_permute_ps(r0, 0b10111111),
+		
+		i11 = _mm_permute_ps(r1, 0b00000001), 
+		i12 = _mm_permute_ps(r1, 0b01011010), 
+		i13 = _mm_permute_ps(r1, 0b10111111),
+		
+		i21 = _mm_permute_ps(r2, 0b00000001), 
+		i22 = _mm_permute_ps(r2, 0b01011010), 
+		i23 = _mm_permute_ps(r2, 0b10111111),
+		
+		i31 = _mm_permute_ps(r3, 0b00000001),
+		i32 = _mm_permute_ps(r3, 0b01011010), 
+		i33 = _mm_permute_ps(r3, 0b10111111);
 		
 	// compute intermediary groups
 	__m128

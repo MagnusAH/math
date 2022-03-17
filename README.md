@@ -94,7 +94,7 @@ Each matrix type comes with two debugging macros, `MAT?F_FMT` and `MAT?F_ARG`, w
 They are used to print the value of the matrix, eg: `printf(MAT4F_FMT, MAT4F_ARG(mat4f_t));`  
 	
 **Below is a list of functions where `?` is representative of the size of the matrix, being 3 (3x3) or 4 (4x4)**  
-It is recommended to use 4x4 matrices in all cases due to them being significantly faster and that not all of the methods are currently implemented for 3x3 matrices. Unimplemented methods are marked as such in the header files.  
+3x3 Matrices have a special option, off by default in the config header to align the `mat3f_t` struct to 16 byte boundaries for helping with older CPUs where unaligned loads and stores are slower. 
 
 > `mat?f_addf(mat?f_t* o, mat?f_t* a, float b)`  
 > Adds `b` to each elemet of `a`, storing the result in `o`  

@@ -17,7 +17,7 @@ union Mat4f
 	};
 	vec4f_t r[4];
 	float f[16];
-} __attribute__((aligned (32)));
+} __attribute__((aligned (16)));
 
 typedef union Mat4f mat4f_t;
 

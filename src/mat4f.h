@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdint.h>
 #include "config.h"
 #include "vec4f.h"
 

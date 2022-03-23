@@ -15,7 +15,7 @@
 // #define MATRIX_ALWAYS_INLINE
 
 /*
-	ALIGN MAT3 STRUCT TO NEAREST 16 BYTE BOUNDARY (and use aligned loads and stores)
+	ALIGN MAT3 STRUCT TO NEAREST 16 BYTE BOUNDARY (and use aligned loads and stores, helps performance on older CPUs)
 */
 // #define MAT3_ALIGN
 
